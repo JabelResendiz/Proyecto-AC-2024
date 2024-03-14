@@ -133,8 +133,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#I/O" name="5"/>
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
-      <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Program Counter"/>
+      <a name="font" val="SansSerif bold 24"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -158,8 +158,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="6" name="Poke Tool"/>
     <tool lib="6" name="Edit Tool"/>
     <tool lib="6" name="Text Tool">
-      <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Program Counter"/>
+      <a name="font" val="SansSerif bold 24"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -7412,6 +7412,75 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="1" loc="(440,680)" name="AND Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
+    </comp>
+  </circuit>
+  <circuit name="Program_Counter">
+    <a name="circuit" val="Program_Counter"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <appear>
+      <rect fill="#beff0f" height="85" rx="10" ry="10" stroke="#000000" stroke-width="2" width="111" x="161" y="118"/>
+      <text font-family="SansSerif" font-size="18" font-weight="bold" text-anchor="middle" x="212" y="164">PC</text>
+      <text font-family="SansSerif" font-size="13" text-anchor="middle" x="240" y="194">Clk</text>
+      <text font-family="SansSerif" font-size="13" text-anchor="middle" x="200" y="139">Rst</text>
+      <text font-family="SansSerif" font-size="13" text-anchor="middle" x="182" y="193">Ena</text>
+      <text font-family="SansSerif" font-size="13" text-anchor="middle" x="175" y="165">ins</text>
+      <text font-family="SansSerif" font-size="13" text-anchor="middle" x="249" y="165">next</text>
+      <circ-port height="8" pin="260,400" width="8" x="176" y="196"/>
+      <circ-port height="10" pin="560,290" width="10" x="265" y="155"/>
+      <circ-port height="8" pin="400,350" width="8" x="196" y="116"/>
+      <circ-port height="8" pin="190,250" width="8" x="156" y="156"/>
+      <circ-port height="8" pin="320,400" width="8" x="236" y="196"/>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="157"/>
+    </appear>
+    <wire from="(270,300)" to="(270,400)"/>
+    <wire from="(340,290)" to="(560,290)"/>
+    <wire from="(190,250)" to="(190,290)"/>
+    <wire from="(190,290)" to="(310,290)"/>
+    <wire from="(330,310)" to="(330,350)"/>
+    <wire from="(260,400)" to="(270,400)"/>
+    <wire from="(690,80)" to="(690,140)"/>
+    <wire from="(430,140)" to="(690,140)"/>
+    <wire from="(430,80)" to="(690,80)"/>
+    <wire from="(430,80)" to="(430,140)"/>
+    <wire from="(270,300)" to="(310,300)"/>
+    <wire from="(320,310)" to="(320,400)"/>
+    <wire from="(330,350)" to="(400,350)"/>
+    <comp lib="0" loc="(320,400)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(190,250)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="width" val="32"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="INPUT"/>
+    </comp>
+    <comp lib="0" loc="(560,290)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="PC_OUTPUT"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="6" loc="(556,118)" name="Text">
+      <a name="text" val="Program Counter"/>
+      <a name="font" val="SansSerif bold 24"/>
+    </comp>
+    <comp lib="4" loc="(340,290)" name="Register">
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(400,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="RESET"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(260,400)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="ENABLE"/>
     </comp>
   </circuit>
 </project>

@@ -1,5 +1,21 @@
 # Orientación Proyecto AC
 
+## Circuits 
+
+-~Register File~
+
+-~ALU~
+
+-~Instruction Decoder~
+
+-~Branch Control~
+
+-~Program Counter~
+
+-Data Path
+
+
+
 ## Materiales
 
 Para la realización del proyecto se entregan junto con este informe los siguientes materiales:
