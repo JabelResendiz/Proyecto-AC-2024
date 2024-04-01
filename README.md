@@ -12,7 +12,11 @@
 
 -~Program Counter~
 
--Data Path
+-~Data Path~
+
+-~Control Unit~
+
+-Cache
 
 
 
