@@ -16,7 +16,7 @@
 
 -~Control Unit~
 
--Cache
+-~Cache~
 
 
 

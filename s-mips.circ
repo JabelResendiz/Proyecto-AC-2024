@@ -143,7 +143,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="text" val="ALU"/>
     </tool>
   </lib>
-  <lib desc="file#C:\Users\HP\Desktop\ProyectoAC\AC-MicroProject-main\s-mips.circ" name="7"/>
   <main name="S-MIPS Board"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
